@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agendar cita | VetCita</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/datos.js" defer></script>
+    <script src="js/almacen.js" defer></script>
+    <script src="js/menu.js" defer></script>
+    <script src="js/agendar.js" defer></script>
+</head>
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+    <header class="cabecera">
+        <p class="marca">VetCita</p>
+        <nav class="menu" aria-label="Menú principal">
+            <button type="button" id="menu-boton" class="menu-boton" aria-expanded="false" aria-controls="menu-lista">Menú</button>
+            <ul id="menu-lista" class="menu-lista">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="agendar.html" aria-current="page">Agendar cita</a></li>
+                <li><a href="citas.html">Mis citas</a></li>
+                <li><a href="ayuda.html">Ayuda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contenido">
+        <h1>Agendar una cita</h1>
+        <noscript>
+            <p class="estado estado-error">Error: esta aplicación necesita JavaScript activado para agendar y mostrar las citas.</p>
+        </noscript>
+        <form id="form-cita" class="formulario" novalidate>
+            <p>Los campos marcados como «obligatorio» deben completarse. Atendemos de lunes a viernes de 08:00 a 18:00 y los sábados de 08:00 a 12:00.</p>
+
+            <fieldset class="seccion">
+                <legend>Datos del dueño</legend>
+            <div class="campo">
+                <label for="dueno">Nombre del dueño (obligatorio)</label>
+                <input type="text" id="dueno" name="dueno" required minlength="3" maxlength="60" autocomplete="name" aria-describedby="dueno-error">
+                <span class="error" id="dueno-error"></span>
+            </div>
+            <div class="campo">
+                <label for="telefono">Teléfono (obligatorio)</label>
+                <input type="tel" id="telefono" name="telefono" required inputmode="numeric" maxlength="15" autocomplete="tel" aria-describedby="telefono-ayuda telefono-error">
+                <span class="ayuda" id="telefono-ayuda">Solo números, de 7 a 10 dígitos.</span>
+                <span class="error" id="telefono-error"></span>
+            </div>
+            <div class="campo">
+                <label for="correo">Correo electrónico (opcional)</label>
+                <input type="email" id="correo" name="correo" maxlength="80" autocomplete="email" aria-describedby="correo-error">
+                <span class="error" id="correo-error"></span>
+            </div>
+            </fieldset>
+
+            <fieldset class="seccion">
+                <legend>Datos de la mascota</legend>
+            <div class="campo">
+                <label for="mascota">Nombre de la mascota (obligatorio)</label>
+                <input type="text" id="mascota" name="mascota" required minlength="2" maxlength="40" autocomplete="off" aria-describedby="mascota-error">
+                <span class="error" id="mascota-error"></span>
+            </div>
+                <fieldset class="opciones" id="grupo-especie" role="radiogroup" aria-describedby="especie-error">
+                    <legend>Especie (obligatorio)</legend>
+                    <label><input type="radio" name="especie" value="Perro" required> Perro</label>
+                    <label><input type="radio" name="especie" value="Gato"> Gato</label>
+                    <label><input type="radio" name="especie" value="Otra"> Otra</label>
+                    <span class="error" id="especie-error"></span>
+                </fieldset>
+            </fieldset>
+
+            <fieldset class="seccion">
+                <legend>Datos de la cita</legend>
+            <div class="campo">
+                <label for="servicio">Servicio (obligatorio)</label>
+                <select id="servicio" name="servicio" required aria-describedby="servicio-error">
+                    <option value="">Selecciona un servicio</option>
+                </select>
+                <span class="error" id="servicio-error"></span>
+            </div>
+            <div class="campo">
+                <label for="fecha">Fecha de la cita (obligatorio)</label>
+                <input type="date" id="fecha" name="fecha" required aria-describedby="fecha-ayuda fecha-error">
+                <span class="ayuda" id="fecha-ayuda">Desde hoy y hasta 90 días. No se atiende los domingos.</span>
+                <span class="error" id="fecha-error"></span>
+            </div>
+            <div class="campo">
+                <label for="hora">Hora (obligatorio)</label>
+                <select id="hora" name="hora" required aria-describedby="hora-ayuda hora-error">
+                    <option value="">Elige primero el servicio y la fecha</option>
+                </select>
+                <span class="ayuda" id="hora-ayuda" aria-live="polite">Elige primero el servicio y la fecha.</span>
+                <span class="error" id="hora-error"></span>
+            </div>
+
+            <div class="campo">
+                <label for="notas">Observaciones (opcional)</label>
+                <textarea id="notas" name="notas" rows="4" maxlength="200" aria-describedby="notas-contador"></textarea>
+                <span class="ayuda" id="notas-contador">0 de 200 caracteres</span>
+            </div>
+            </fieldset>
+
+            <button type="submit" class="boton">Agendar cita</button>
+            <p id="estado-form" class="estado" role="status" tabindex="-1"></p>
+        </form>
+    </main>
+    <footer class="pie">
+        <p>VetCita · Proyecto de medio ciclo – Desarrollo basado en plataformas</p>
+        <p>Jimenez Sixto · Jimmy Garcia · Diao Andrade</p>
+    </footer>
+</body>
+</html>

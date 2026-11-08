@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Servicios | VetCita</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/menu.js" defer></script>
+</head>
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+    <header class="cabecera">
+        <p class="marca">VetCita</p>
+        <nav class="menu" aria-label="Menú principal">
+            <button type="button" id="menu-boton" class="menu-boton" aria-expanded="false" aria-controls="menu-lista">Menú</button>
+            <ul id="menu-lista" class="menu-lista">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html" aria-current="page">Servicios</a></li>
+                <li><a href="agendar.html">Agendar cita</a></li>
+                <li><a href="citas.html">Mis citas</a></li>
+                <li><a href="ayuda.html">Ayuda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contenido">
+        <h1>Servicios</h1>
+        <p class="intro">Elige el servicio que necesita tu mascota. La duración se usa para reservar el tiempo exacto en la agenda.</p>
+        <ul class="servicios">
+            <li class="servicio">
+                <h2>Consulta general</h2>
+                <p>Revisión completa y orientación sobre la salud de tu mascota.</p>
+                <p><strong>Duración:</strong> 30 minutos</p>
+                <a class="boton boton-secundario" href="agendar.html?servicio=consulta">Agendar cita de Consulta general</a>
+            </li>
+            <li class="servicio">
+                <h2>Vacunación</h2>
+                <p>Aplicación de vacunas según la edad y el esquema de tu mascota.</p>
+                <p><strong>Duración:</strong> 20 minutos</p>
+                <a class="boton boton-secundario" href="agendar.html?servicio=vacunacion">Agendar cita de Vacunación</a>
+            </li>
+            <li class="servicio">
+                <h2>Desparasitación</h2>
+                <p>Tratamiento contra parásitos internos y externos.</p>
+                <p><strong>Duración:</strong> 20 minutos</p>
+                <a class="boton boton-secundario" href="agendar.html?servicio=desparasitacion">Agendar cita de Desparasitación</a>
+            </li>
+            <li class="servicio">
+                <h2>Limpieza dental</h2>
+                <p>Limpieza para cuidar los dientes y las encías.</p>
+                <p><strong>Duración:</strong> 60 minutos</p>
+                <a class="boton boton-secundario" href="agendar.html?servicio=dental">Agendar cita de Limpieza dental</a>
+            </li>
+            <li class="servicio">
+                <h2>Baño y peluquería</h2>
+                <p>Baño, corte de pelo y corte de uñas.</p>
+                <p><strong>Duración:</strong> 60 minutos</p>
+                <a class="boton boton-secundario" href="agendar.html?servicio=bano">Agendar cita de Baño y peluquería</a>
+            </li>
+        </ul>
+    </main>
+    <footer class="pie">
+        <p>VetCita · Proyecto de medio ciclo – Desarrollo basado en plataformas</p>
+        <p>Jimenez Sixto · Jimmy Garcia · Diao Andrade </p>
+    </footer>
+</body>
+</html>

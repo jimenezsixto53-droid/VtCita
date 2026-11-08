@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mis citas | VetCita</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/datos.js" defer></script>
+    <script src="js/almacen.js" defer></script>
+    <script src="js/menu.js" defer></script>
+    <script src="js/citas.js" defer></script>
+</head>
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+    <header class="cabecera">
+        <p class="marca">VetCita</p>
+        <nav class="menu" aria-label="Menú principal">
+            <button type="button" id="menu-boton" class="menu-boton" aria-expanded="false" aria-controls="menu-lista">Menú</button>
+            <ul id="menu-lista" class="menu-lista">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="agendar.html">Agendar cita</a></li>
+                <li><a href="citas.html" aria-current="page">Mis citas</a></li>
+                <li><a href="ayuda.html">Ayuda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contenido">
+        <h1>Mis citas</h1>
+        <noscript>
+            <p class="estado estado-error">Error: esta aplicación necesita JavaScript activado para agendar y mostrar las citas.</p>
+        </noscript>
+        <fieldset class="filtros">
+            <legend>Mostrar</legend>
+            <label><input type="radio" name="filtro" value="proximas" checked> Próximas</label>
+            <label><input type="radio" name="filtro" value="pasadas"> Pasadas</label>
+            <label><input type="radio" name="filtro" value="canceladas"> Canceladas</label>
+            <label><input type="radio" name="filtro" value="todas"> Todas</label>
+        </fieldset>
+        <p id="estado-lista" class="estado" role="status"></p>
+
+        <h2 id="titulo-lista" tabindex="-1">Lista de citas</h2>
+        <ul id="lista" class="lista-citas"></ul>
+        <p id="vacio" class="vacio" hidden>No hay citas para mostrar. <a href="agendar.html">Agenda una cita</a>.</p>
+    </main>
+    <footer class="pie">
+        <p>VetCita · Proyecto de medio ciclo – Desarrollo basado en plataformas</p>
+        <p>Jimenez Sixto · Jimmy Garcia · Diao Andrade</p>
+    </footer>
+</body>
+</html>

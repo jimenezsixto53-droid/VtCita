@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ayuda y accesibilidad | VetCita</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/menu.js" defer></script>
+</head>
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+    <header class="cabecera">
+        <p class="marca">VetCita</p>
+        <nav class="menu" aria-label="Menú principal">
+            <button type="button" id="menu-boton" class="menu-boton" aria-expanded="false" aria-controls="menu-lista">Menú</button>
+            <ul id="menu-lista" class="menu-lista">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="agendar.html">Agendar cita</a></li>
+                <li><a href="citas.html">Mis citas</a></li>
+                <li><a href="ayuda.html" aria-current="page">Ayuda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contenido">
+        <h1>Ayuda y accesibilidad</h1>
+
+        <section aria-labelledby="t-uso">
+            <h2 id="t-uso">Cómo agendar una cita</h2>
+            <ol>
+                <li>Entra a «Agendar cita» y escribe los datos del dueño y de la mascota.</li>
+                <li>Elige el servicio y la fecha: la lista de horas muestra solo los horarios libres.</li>
+                <li>Pulsa «Agendar cita». Podrás verla o cancelarla en «Mis citas».</li>
+            </ol>
+        </section>
+
+        <section aria-labelledby="t-reglas">
+            <h2 id="t-reglas">Reglas de la agenda</h2>
+            <ul>
+                <li>La clínica atiende una cita a la vez: dos citas no pueden empalmarse.</li>
+                <li>No se atiende los domingos y no se puede agendar en fechas pasadas.</li>
+                <li>Las citas se agendan con hasta 90 días de anticipación.</li>
+                <li>Si agendas para hoy, solo se ofrecen horas posteriores a la hora actual.</li>
+                <li>Al cancelar una cita, su horario queda libre para otra persona.</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="t-teclado">
+            <h2 id="t-teclado">Uso con el teclado</h2>
+            <table>
+                <caption>Teclas para usar la aplicación sin ratón</caption>
+                <thead>
+                    <tr><th scope="col">Tecla</th><th scope="col">Acción</th></tr>
+                </thead>
+                <tbody>
+                    <tr><th scope="row">Tab</th><td>Pasa al siguiente elemento.</td></tr>
+                    <tr><th scope="row">Mayús + Tab</th><td>Vuelve al elemento anterior.</td></tr>
+                    <tr><th scope="row">Enter</th><td>Activa enlaces y botones, y envía el formulario.</td></tr>
+                    <tr><th scope="row">Espacio</th><td>Selecciona una opción o una casilla.</td></tr>
+                    <tr><th scope="row">Esc</th><td>Cierra el menú en pantallas pequeñas.</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section aria-labelledby="t-datos">
+            <h2 id="t-datos">Tus datos</h2>
+            <p>Las citas se guardan solo en este navegador. Si borras los datos de navegación, se pierden.</p>
+        </section>
+
+        <section aria-labelledby="t-acerca">
+            <h2 id="t-acerca">Acerca del proyecto</h2>
+            <p>VetCita es un proyecto de medio ciclo de la asignatura Desarrollo basado en plataformas, hecho con HTML, CSS y JavaScript nativos, sin librerías externas. La clínica y sus horarios son ficticios. Integrantes: Jimenez Sixto y Jimmy Garcia.</p>
+        </section>
+    </main>
+    <footer class="pie">
+        <p>VetCita · Proyecto de medio ciclo – Desarrollo basado en plataformas</p>
+        <p>Jimenez Sixto · Jimmy Garcia · Diao Andrade</p>
+    </footer>
+</body>
+</html>

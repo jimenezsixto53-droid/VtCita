@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio | VetCita</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/datos.js" defer></script>
+    <script src="js/almacen.js" defer></script>
+    <script src="js/menu.js" defer></script>
+    <script src="js/inicio.js" defer></script>
+</head>
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+    <header class="cabecera">
+        <p class="marca">VetCita</p>
+        <nav class="menu" aria-label="Menú principal">
+            <button type="button" id="menu-boton" class="menu-boton" aria-expanded="false" aria-controls="menu-lista">Menú</button>
+            <ul id="menu-lista" class="menu-lista">
+                <li><a href="index.html" aria-current="page">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="agendar.html">Agendar cita</a></li>
+                <li><a href="citas.html">Mis citas</a></li>
+                <li><a href="ayuda.html">Ayuda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contenido">
+        <h1>Cuidamos a tu mascota, organizamos tu cita</h1>
+        <noscript>
+            <p class="estado estado-error">Error: esta aplicación necesita JavaScript activado para agendar y mostrar las citas.</p>
+        </noscript>
+        <p class="intro">Agenda en línea la cita de tu perro, gato u otra mascota y revisa tus citas programadas. Tus datos se guardan solo en este navegador.</p>
+
+        <section aria-labelledby="t-resumen">
+            <h2 id="t-resumen">Resumen de tus citas</h2>
+            <ul class="resumen">
+                <li class="tarjeta"><span class="numero" id="num-proximas">0</span> <span class="rotulo">Próximas</span></li>
+                <li class="tarjeta"><span class="numero" id="num-hoy">0</span> <span class="rotulo">Para hoy</span></li>
+                <li class="tarjeta"><span class="numero" id="num-pasadas">0</span> <span class="rotulo">Pasadas</span></li>
+                <li class="tarjeta"><span class="numero" id="num-canceladas">0</span> <span class="rotulo">Canceladas</span></li>
+            </ul>
+            <p id="proxima" class="estado" role="status">Activa JavaScript para ver el resumen de tus citas.</p>
+        </section>
+
+        <section aria-labelledby="t-horario">
+            <h2 id="t-horario">Horario de atención</h2>
+            <p id="atencion" role="status"></p>
+            <table>
+                <caption>Horario de atención de la clínica</caption>
+                <thead>
+                    <tr><th scope="col">Día</th><th scope="col">Horario</th></tr>
+                </thead>
+                <tbody>
+                    <tr><th scope="row">Lunes a viernes</th><td>08:00 a 18:00</td></tr>
+                    <tr><th scope="row">Sábados</th><td>08:00 a 12:00</td></tr>
+                    <tr><th scope="row">Domingos</th><td>Cerrado</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section aria-labelledby="t-acciones">
+            <h2 id="t-acciones">¿Qué necesitas?</h2>
+            <p>
+                <a class="boton" href="agendar.html">Agendar una cita</a>
+                <a class="boton boton-secundario" href="citas.html">Ver mis citas</a>
+            </p>
+        </section>
+    </main>
+    <footer class="pie">
+        <p>VetCita · Proyecto de medio ciclo – Desarrollo basado en plataformas</p>
+        <p>Jimenez Sixto · Jimmy Garcia · Diao Andrade  </p>
+    </footer>
+</body>
+</html>
